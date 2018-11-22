@@ -1,7 +1,7 @@
-# This is an example of the config file, follow this step before initializing terraform:
+# This is an example of the config file, follow those steps before issuing the "terraform apply" command:
 # 1. Rename this file to config.tf
 # 2. Replace aws_access_key and aws_secret_key with your real aws credentials
-# 3. Copy the ssh private key to /keys and change private_key var to match
+# 3. Copy the ssh private key to "/keys" and change private_key var to match the file's location
 
 variable "aws_access_key" {
   default = "INSERT YOUR AWS ACCESS KEY HERE"
