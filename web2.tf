@@ -1,8 +1,8 @@
-resource "aws_instance" "web1" {
+resource "aws_instance" "web2" {
   ami           = "ami-0bdf93799014acdc4"
   instance_type = "t2.micro"
   subnet_id = "${aws_subnet.TfDemo1Subnet.id}"
-  private_ip = "10.0.1.11"
+  private_ip = "10.0.1.12"
   user_data = "${file("config/webUserdata.sh")}"
   associate_public_ip_address = true
   key_name = "${var.aws_key_name}"
@@ -13,7 +13,7 @@ resource "aws_instance" "web1" {
     "${aws_security_group.allowPing.id}"
   ]
   tags {
-    Name = "Web1"
+    Name = "Web2"
   }
 
   # Allow provisioner to login using ssh key
