@@ -48,3 +48,7 @@ resource "aws_instance" "haproxy" {
   }
 
 }
+
+output "HAProxy_ip" {
+  value = "${aws_instance.haproxy.public_ip}"
+}

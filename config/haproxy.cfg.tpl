@@ -48,5 +48,4 @@ frontend www-http
   default_backend web-backend
 
 backend web-backend
-  server web1 ${web1_local_ip}:80 check
-  server web2 ${web2_local_ip}:80 check
+  ${web_local_ips}
